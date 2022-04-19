@@ -13,8 +13,56 @@ class Commandes
     #[ORM\Column(type: 'integer')]
     private $id;
 
+    #[ORM\ManyToOne(targetEntity: Game::class, inversedBy: 'commandes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $fknjeux;
+
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'commandes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $fkuser;
+
+    #[ORM\ManyToOne(targetEntity: Game::class, inversedBy: 'commandes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $fkprix;
+
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function getFknjeux(): ?Game
+    {
+        return $this->fknjeux;
+    }
+
+    public function setFknjeux(?Game $fknjeux): self
+    {
+        $this->fknjeux = $fknjeux;
+
+        return $this;
+    }
+
+    public function getFkuser(): ?User
+    {
+        return $this->fkuser;
+    }
+
+    public function setFkuser(?User $fkuser): self
+    {
+        $this->fkuser = $fkuser;
+
+        return $this;
+    }
+
+    public function getFkprix(): ?Game
+    {
+        return $this->fkprix;
+    }
+
+    public function setFkprix(?Game $fkprix): self
+    {
+        $this->fkprix = $fkprix;
+
+        return $this;
     }
 }

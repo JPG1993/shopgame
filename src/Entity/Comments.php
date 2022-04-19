@@ -22,6 +22,14 @@ class Comments
     #[ORM\Column(type: 'integer')]
     private $avis;
 
+    #[ORM\ManyToOne(targetEntity: Game::class, inversedBy: 'comments')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $fknjeu;
+
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'comments')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $fkuser;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -59,6 +67,30 @@ class Comments
     public function setAvis(int $avis): self
     {
         $this->avis = $avis;
+
+        return $this;
+    }
+
+    public function getFknjeu(): ?Game
+    {
+        return $this->fknjeu;
+    }
+
+    public function setFknjeu(?Game $fknjeu): self
+    {
+        $this->fknjeu = $fknjeu;
+
+        return $this;
+    }
+
+    public function getFkuser(): ?User
+    {
+        return $this->fkuser;
+    }
+
+    public function setFkuser(?User $fkuser): self
+    {
+        $this->fkuser = $fkuser;
 
         return $this;
     }

@@ -19,6 +19,14 @@ class Message
     #[ORM\Column(type: 'date')]
     private $date;
 
+    #[ORM\ManyToOne(targetEntity: Sujet::class, inversedBy: 'messages')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $fksujet;
+
+    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'messages')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $fkuser;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +52,30 @@ class Message
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
+
+        return $this;
+    }
+
+    public function getFksujet(): ?Sujet
+    {
+        return $this->fksujet;
+    }
+
+    public function setFksujet(?Sujet $fksujet): self
+    {
+        $this->fksujet = $fksujet;
+
+        return $this;
+    }
+
+    public function getFkuser(): ?User
+    {
+        return $this->fkuser;
+    }
+
+    public function setFkuser(?User $fkuser): self
+    {
+        $this->fkuser = $fkuser;
 
         return $this;
     }
