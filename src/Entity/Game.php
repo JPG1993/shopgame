@@ -24,9 +24,6 @@ class Game
     #[ORM\Column(type: 'date')]
     private $date;
 
-    #[ORM\Column(type: 'float')]
-    private $prix;
-
     #[ORM\Column(type: 'integer')]
     private $stock;
 
@@ -35,6 +32,16 @@ class Game
 
     #[ORM\OneToMany(mappedBy: 'fknjeux', targetEntity: Commandes::class)]
     private $commandes;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $image;
+
+    #[ORM\Column(type: 'integer', nullable: true)]
+    private $note;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $prix;
+
 
     public function __construct()
     {
@@ -163,6 +170,30 @@ class Game
                 $commande->setFknjeux(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    public function getNote(): ?int
+    {
+        return $this->note;
+    }
+
+    public function setNote(?int $note): self
+    {
+        $this->note = $note;
 
         return $this;
     }

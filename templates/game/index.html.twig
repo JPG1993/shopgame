@@ -3,41 +3,46 @@
 {% block title %}Game index{% endblock %}
 
 {% block body %}
-    <h1>Game index</h1>
+<style>
+.h1 {
+    text-align: center;
+    color: white;
+}
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Category</th>
-                <th>Date</th>
-                <th>Prix</th>
-                <th>Stock</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for game in games %}
-            <tr>
-                <td>{{ game.id }}</td>
-                <td>{{ game.name }}</td>
-                <td>{{ game.category }}</td>
-                <td>{{ game.date ? game.date|date('Y-m-d') : '' }}</td>
-                <td>{{ game.prix }}</td>
-                <td>{{ game.stock }}</td>
-                <td>
-                    <a href="{{ path('app_game_show', {'id': game.id}) }}">show</a>
-                    <a href="{{ path('app_game_edit', {'id': game.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="7">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+body {
+  background-image: url('{{ asset('image/imagefond.jpg') }}');
+  background-size: cover; 
+}
 
+.section2 {
+    display: flex;
+    flex-direction: row;
+    opacity: 0.9;
+}
+
+</style>
+    <h1 class="h1">Game Accueil</h1>
+
+    <section class="section2">
+    {% for game in games %}
+      <div class="card" style="width: 30%;">
+            <img src="{{  game.image }}" class="card-img-top" alt="..."  >
+            <div class="card-body">
+              <h5 class="card-title">{{ game.name }} </h5>
+              <p class="card-text"> note du jeux: {{ game.note }} </p>
+              <p class="card-text">jeux de: {{ game.category }}</p>
+              <p class="card-text">prix: {{ game.prix }}</p>
+              <p class="card-text">Date de sortie: {{ game.date|date('Y-m-d') }}</p>
+              <a href="{{ path('app_game_show', {'id': game.id}) }}" class="btn" style="background:#802B75; color:white;">Voir le jeux {{ game.id }}</a>
+            </div>
+        </div>
+    {% else %}
+        <tr>
+            <td colspan="11">no records found</td>
+        </tr>
+    {% endfor %}
+  </section>
+  
     <a href="{{ path('app_game_new') }}">Create new</a>
+
 {% endblock %}
