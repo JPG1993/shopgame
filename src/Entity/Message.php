@@ -27,6 +27,9 @@ class Message
     #[ORM\JoinColumn(nullable: false)]
     private $fkuser;
 
+    #[ORM\Column(type: 'string', length: 10000)]
+    private $contenu;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -76,6 +79,18 @@ class Message
     public function setFkuser(?User $fkuser): self
     {
         $this->fkuser = $fkuser;
+
+        return $this;
+    }
+
+    public function getContenu(): ?string
+    {
+        return $this->contenu;
+    }
+
+    public function setContenu(string $contenu): self
+    {
+        $this->contenu = $contenu;
 
         return $this;
     }
