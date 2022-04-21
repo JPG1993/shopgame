@@ -26,8 +26,7 @@ class Comments
     #[ORM\JoinColumn(nullable: false)]
     private $fknjeu;
 
-    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'comments')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\ManyToOne(targetEntity: Utilisateur::class, inversedBy: 'comments')]
     private $fkuser;
 
     public function getId(): ?int

@@ -17,13 +17,12 @@ class Commandes
     #[ORM\JoinColumn(nullable: false)]
     private $fknjeux;
 
-    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'commandes')]
-    #[ORM\JoinColumn(nullable: false)]
-    private $fkuser;
-
     #[ORM\ManyToOne(targetEntity: Game::class, inversedBy: 'commandes')]
     #[ORM\JoinColumn(nullable: false)]
     private $fkprix;
+
+    #[ORM\ManyToOne(targetEntity: Utilisateur::class, inversedBy: 'commandes')]
+    private $fkuser;
 
     public function getId(): ?int
     {

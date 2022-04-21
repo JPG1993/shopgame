@@ -23,8 +23,7 @@ class Message
     #[ORM\JoinColumn(nullable: false)]
     private $fksujet;
 
-    #[ORM\ManyToOne(targetEntity: User::class, inversedBy: 'messages')]
-    #[ORM\JoinColumn(nullable: false)]
+    #[ORM\ManyToOne(targetEntity: Utilisateur::class, inversedBy: 'messages')]
     private $fkuser;
 
     public function getId(): ?int
