@@ -1,0 +1,1 @@
+<?php SELECT * FROM "%' ORDER BY poste DESC LIMIT 0,10"
