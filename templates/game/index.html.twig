@@ -33,7 +33,7 @@ body {
               <p class="card-text">jeux de: {{ game.category }}</p>
               <p class="card-text">prix: {{ game.prix }}</p>
               <p class="card-text">Date de sortie: {{ game.date|date('Y-m-d') }}</p>
-              <a href="{{ path('app_game_show', {'id': game.id}) }}" class="btn" style="background:#802B75; color:white;">Voir le jeux {{ game.id }}</a>
+              <a href="{{ path('app_game_show', {'id': game.id}) }}" class="btn" style="background:#802B75; color:white;">Voir le {{ game.name }}</a>
             </div>
         </div>
     {% else %}
