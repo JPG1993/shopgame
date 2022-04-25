@@ -1,130 +1,123 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Acceuil{% endblock %}
+{% block title %}Metaverse Accueil{% endblock %}
 
 {% block body %}
 <style>
+.h1 {
+    text-align: center;
+    color: white;
+}
+
 body {
   background-image: url('{{ asset('image/imagefond.jpg') }}');
   background-size: cover; 
 }
 
-</style>
-<body class="body">
+.section2 {
+    display: flex;
+    flex-direction: row;
+    opacity: 0.9;
+}
 
-  <section class="contentikki">  
+</style>
+
+    <h1 class="h1"> Metaverse Accueil</h1>
+
+    <section class="contentikki">  
       <div class="slider-container">
 
-              <div class="slider-content">
-            
-                <div class="slider-single">
-                  <div class="slider-single-image">
-                  <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/ec54a7c5-1b8f-4535-9459-3d5592991447.jpeg" alt="1" />
-                  <div class="con" >
-                      <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/157c4057-5dff-44a9-8ab1-ab74b1d81ff2.png" alt="1" />
-                      <p class="title1"> <b>"Sog`lom turmush sari"</b> <br> <span> Tok-shou </span></p> 
-                      <p class="time"><b> 15:00</b>  <span class="two"> 21-mart </span> </p>
-                      <div class="conbir"></div>
-                    </div>
-                    </div> 
-                  <a class="slider-single-likes" href="javascript:void(0);">
-                  
-                  </a>
-                </div>
-                <div class="slider-single">
+                <div class="slider-content">
+
+                  <div class="slider-single">
                     <div class="slider-single-image">
-                    <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/0a2c0fce-0a4d-4952-b855-5bec996dd092.jpeg" alt="1" />
+                    <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/ec54a7c5-1b8f-4535-9459-3d5592991447.jpeg" alt="1" />
                     <div class="con" >
-                        <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/21543ce8-3707-49a4-8fc8-1b1d535d50a3.png" alt="2" />
-                        <p class="title1">  <b>"Sehrli sozlar"</b> <br> <span> Teleko`rsatuv </span></p>
-                        <p class="time">
-                          <b> 07:00</b>  
-                          <span class="two"> 20-mart </span> </p>
+                        <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/157c4057-5dff-44a9-8ab1-ab74b1d81ff2.png" alt="1" />
+                        <p class="title1"> <b>"Sog`lom turmush sari"</b> <br> <span> Tok-shou </span></p> 
+                        <p class="time"><b> 15:00</b>  <span class="two"> 21-mart </span> </p>
                         <div class="conbir"></div>
                       </div>
                       </div> 
                     <a class="slider-single-likes" href="javascript:void(0);">
-                    
+
                     </a>
                   </div>
                   <div class="slider-single">
                       <div class="slider-single-image">
-                      <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/eed32a4b-afee-4e96-812d-e71f1b5a7e0c.jpeg" alt="1" />
+                      <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/0a2c0fce-0a4d-4952-b855-5bec996dd092.jpeg" alt="1" />
                       <div class="con" >
-                          <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/150c5bdf-ec92-4c62-9afe-d1ac0251b19a.png" alt="3" />
-                          <p class="title1"> <b>"Maktub"</b> <br> <span> Teleko`rsatuv </span></p>
-                          <p class="time"><b> 00:00</b>  <span class="two"> 18-mart </span> </p>
+                          <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/21543ce8-3707-49a4-8fc8-1b1d535d50a3.png" alt="2" />
+                          <p class="title1">  <b>"Sehrli sozlar"</b> <br> <span> Teleko`rsatuv </span></p>
+                          <p class="time">
+                            <b> 07:00</b>  
+                            <span class="two"> 20-mart </span> </p>
                           <div class="conbir"></div>
                         </div>
                         </div> 
                       <a class="slider-single-likes" href="javascript:void(0);">
-                      
+
                       </a>
                     </div>
                     <div class="slider-single">
                         <div class="slider-single-image">
-                        <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/22d47854-4b51-4bac-b8cb-8fd58a32377e.jpeg" alt="1" />
+                        <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/eed32a4b-afee-4e96-812d-e71f1b5a7e0c.jpeg" alt="1" />
                         <div class="con" >
-                            <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/157c4057-5dff-44a9-8ab1-ab74b1d81ff2.png" alt="4" />
-                            <p class="title1"><b>"Sehrli sozlar"</b> <br> <span> Teleko`rsatuv </span></p>
-                            <p class="time"><b> 12:30</b>  <span class="two"> 17-mart </span> </p>
+                            <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/150c5bdf-ec92-4c62-9afe-d1ac0251b19a.png" alt="3" />
+                            <p class="title1"> <b>"Maktub"</b> <br> <span> Teleko`rsatuv </span></p>
+                            <p class="time"><b> 00:00</b>  <span class="two"> 18-mart </span> </p>
                             <div class="conbir"></div>
                           </div>
                           </div> 
                         <a class="slider-single-likes" href="javascript:void(0);">
-                        
+
                         </a>
                       </div>
                       <div class="slider-single">
                           <div class="slider-single-image">
-                          <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/0e408d97-33fb-4da1-ae97-9f145732acfb.jpeg" alt="1" />
+                          <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/22d47854-4b51-4bac-b8cb-8fd58a32377e.jpeg" alt="1" />
                           <div class="con" >
-                              <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/150c5bdf-ec92-4c62-9afe-d1ac0251b19a.png" alt="5" />
-                              <p class="title1"><b>"Assalom, O`zbekiston!"</b> <br> <span>  Teleko`rsatuv </span></p>
-                              <p class="time"><b> 05:00</b>  <span class="two"> 18-mart </span> </p>
+                              <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/157c4057-5dff-44a9-8ab1-ab74b1d81ff2.png" alt="4" />
+                              <p class="title1"><b>"Sehrli sozlar"</b> <br> <span> Teleko`rsatuv </span></p>
+                              <p class="time"><b> 12:30</b>  <span class="two"> 17-mart </span> </p>
                               <div class="conbir"></div>
                             </div>
                             </div> 
                           <a class="slider-single-likes" href="javascript:void(0);">
-                          
+
                           </a>
                         </div>
                         <div class="slider-single">
                             <div class="slider-single-image">
-                            <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/5181d8aa-3dbb-4a7d-a5d7-f827158d9be5.jpeg" alt="1" />
+                            <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/0e408d97-33fb-4da1-ae97-9f145732acfb.jpeg" alt="1" />
                             <div class="con" >
-                                <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/21543ce8-3707-49a4-8fc8-1b1d535d50a3.png" alt="1" />
-                                <p class="title1"> <b>"Sog`lom turmush sari"</b> <br> <span> Tok-shou </span></p> 
-                                <p class="time"><b> 15:20</b>  <span class="two"> 20-mart </span> </p>
+                                <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/150c5bdf-ec92-4c62-9afe-d1ac0251b19a.png" alt="5" />
+                                <p class="title1"><b>"Assalom, O`zbekiston!"</b> <br> <span>  Teleko`rsatuv </span></p>
+                                <p class="time"><b> 05:00</b>  <span class="two"> 18-mart </span> </p>
                                 <div class="conbir"></div>
                               </div>
                               </div> 
                             <a class="slider-single-likes" href="javascript:void(0);">
-                            
+
                             </a>
                           </div>
-        </div>
-              <a class="slider-left" href="javascript:void(0);"><i class="fa fa-arrow-left"></i></a>
-              <a class="slider-right" href="javascript:void(0);"><i class="fa fa-arrow-right"></i></a>    
-      </div>
-  </section>
+                          <div class="slider-single">
+                              <div class="slider-single-image">
+                              <img class="img" src="https://mtrk.uz/modules/mtrk-broadcast/client/assets/photos_anons/5181d8aa-3dbb-4a7d-a5d7-f827158d9be5.jpeg" alt="1" />
+                              <div class="con" >
+                                  <img class="logo" src="https://mtrk.uz/modules/mtrk-channel/client/assets/logo/21543ce8-3707-49a4-8fc8-1b1d535d50a3.png" alt="1" />
+                                  <p class="title1"> <b>"Sog`lom turmush sari"</b> <br> <span> Tok-shou </span></p> 
+                                  <p class="time"><b> 15:20</b>  <span class="two"> 20-mart </span> </p>
+                                  <div class="conbir"></div>
+                                </div>
+                                </div> 
+                              <a class="slider-single-likes" href="javascript:void(0);">
 
-  {# <section class="section2">
-    {% for game in games %}
-      <div class="card" style="width: 30%;">
-            <img src={{ game.image }} class="card-img-top" alt="..."  >
-            <div class="card-body">
-              <h5 class="card-title">{{ game.name }}</h5>
-              <p class="card-text">{{ game.category }}</p>
-              <p class="card-text">{{ game.prix }}</p>
-              <a href="{{ path('app_game_show', {'id': game.id}) }}" class="btn" style="background:#802B75; color:white;">Voir le jeux {{ game.id }}</a>
-            </div>
+                              </a>
+                            </div>
+          </div>
+                <a class="slider-left" href="javascript:void(0);"><i class="fa fa-arrow-left"></i></a>
+                <a class="slider-right" href="javascript:void(0);"><i class="fa fa-arrow-right"></i></a>    
         </div>
-    {% else %}
-     <tr>
-                <td colspan="11">no records found</td>
-            </tr>
-    {% endfor %}
-  </section> #}
-</body>     
+    </section>
 {% endblock %}
